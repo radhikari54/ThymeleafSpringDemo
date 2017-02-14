@@ -19,13 +19,9 @@
         </div>
 
         <div class="form-group" th:class="${#fields.hasErrors('userName')} ? 'form-group has-error' : 'form-group'">
-            <label for="username" th:text="#{login.username}"/>
-            <input type="text" id="username" name="username" class="form-control" th:field="*{userName}" th:errorclass="has-error"/>
-            <span class="help-block" th:if="${#fields.hasErrors('userName')}">
-                <ul>
-                    <li th:each="err : ${#fields.errors('userName')}" th:text="${err}"/>
-                </ul>
-            </span>
+            <label for="username"/>
+            <input type="text" id="username" name="username" class="form-control"  />
+
         </div>
 
         <div class="form-group" th:class="${#fields.hasErrors('password')} ? 'form-group has-error' : 'form-group'">
